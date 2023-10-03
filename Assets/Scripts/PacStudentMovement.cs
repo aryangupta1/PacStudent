@@ -22,7 +22,7 @@ public class PacStudentMovement : MonoBehaviour
     private void Start()
     {
         // Set initial position
-        transform.position = grid[3];
+        transform.position = grid[0];
         isMoving = true;
         // Begin movement
         StartMovement();
