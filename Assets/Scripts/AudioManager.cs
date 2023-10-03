@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource intro;
+    public AudioSource pacStudentNonEatingAudio;
     public AudioSource normalState;
 
     void Start()
@@ -27,5 +28,7 @@ public class AudioManager : MonoBehaviour
         // Play the normal state audio on loop
         normalState.loop = true;
         normalState.Play();
+        pacStudentNonEatingAudio.loop = true;
+        pacStudentNonEatingAudio.Play();
     }
 }
