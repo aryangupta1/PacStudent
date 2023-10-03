@@ -40,23 +40,10 @@ public class PacStudentMovement : MonoBehaviour
             {
                 // Update to the next waypoint, or loop to the start if at the last waypoint
                 currentGridPosition = (currentGridPosition + 1) % grid.Length;
-
-                // Update rotation to face the next grid position
-                UpdateRotation();
             }
         }
     }
 
-    void UpdateRotation()
-    {
-        // Ensure there is a new grid position
-        if (currentGridPosition < grid.Length)
-        {
-            Vector3 direction = grid[currentGridPosition] - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
-    }
 
     public void StartMovement()
     {
